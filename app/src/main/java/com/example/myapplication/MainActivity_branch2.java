@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
-
+import android.content.Intent;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -14,25 +14,36 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_branch2 extends AppCompatActivity {
 
     private DatePicker datePicker;
-    private Button btnShowSaturdays;
+    private Button btnShowSaturdays, btnBack;
     private TextView tvResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_branch2); // Убедитесь, что используете правильный layout
 
         datePicker = findViewById(R.id.datePicker);
         btnShowSaturdays = findViewById(R.id.btnShowSaturdays);
+        btnBack = findViewById(R.id.btn3); // Кнопка "Masha"
         tvResult = findViewById(R.id.tvResult);
 
         btnShowSaturdays.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showSaturdays();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Возврат на первый экран
+                Intent intent = new Intent(MainActivity_branch2.this, MainActivity.class);
+                startActivity(intent);
+                finish(); // Закрыть текущую активность
             }
         });
     }
