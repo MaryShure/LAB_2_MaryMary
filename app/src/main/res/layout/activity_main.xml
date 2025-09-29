@@ -77,7 +77,7 @@
         android:textSize="16sp"/>
 
     <Button
-        android:id="@+id/btnNewScreen"
+        android:id="@+id/btnToNewScreen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Новый функционал"
