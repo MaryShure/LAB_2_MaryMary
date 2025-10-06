@@ -78,7 +78,7 @@ public class MainActivity_branch2 extends AppCompatActivity {
 
     private String formatSaturdaysResult(List<Calendar> saturdays, int year, int month) {
         if (saturdays.isEmpty()) {
-            return "в выбранном месяце нет суббот";
+            return "В выбранном месяце нет суббот";
         }
 
         SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy", Locale.getDefault());
